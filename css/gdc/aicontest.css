@@ -1,0 +1,6 @@
+:root {
+    --main-color: #E7401D;
+    --foreground-color: white;
+    --secondary-color: #FBEA1B;
+    --image-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(35deg) brightness(107%) contrast(101%);
+}

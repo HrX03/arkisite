@@ -1,14 +1,25 @@
+:root {
+    --main-color: white;
+    --secondary-color: white;
+    --foreground-color: white;
+    --image-filter: none;
+}
+
 html {
     background-color: black;
-    color: white;
 }
 
 body {
-    background-color: #E7401D;
+    background-color: var(--main-color);
+    color: var(--foreground-color);
+}
+
+a {
+  color: var(--foreground-color);
 }
 
 img.icon {
-    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(35deg) brightness(107%) contrast(101%);
+    filter: var(--image-filter);
 }
 
 h1 {
@@ -18,7 +29,8 @@ h1 {
     line-height: 1;
 }
 
-h2, h3 {
+h2,
+h3 {
     font-family: 'BMSpace';
     font-weight: 400;
     line-height: 1;
@@ -34,21 +46,21 @@ h3 {
 
 p {
     font-size: 16px;
-    font-variation-settings: 
+    font-variation-settings:
         "wdth" 100,
         "wght" 400,
         "opsz" 30;
 }
 
 p b {
-    font-variation-settings: 
+    font-variation-settings:
         "wdth" 100,
         "wght" 700,
         "opsz" 8;
 }
 
 #header-bar {
-    background-color: #E7401D;
+    background-color: var(--main-color);
 }
 
 #page-header .title-div {
@@ -74,7 +86,7 @@ p b {
     transform: translateY(-50%);
     width: 25%;
     aspect-ratio: 1;
-    background-color: #E7401D;
+    background-color: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,6 +104,7 @@ p b {
 
 #download-box {
     background-color: black;
+    color: white;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -114,6 +127,6 @@ p b {
     justify-content: center;
     align-items: center;
     width: 80px;
-    background-color: #FBEA1B;
+    background-color: var(--secondary-color);
     align-self: stretch;
 }
