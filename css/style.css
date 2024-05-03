@@ -13,17 +13,17 @@
 
 @font-face {
   font-family: "Helvetica Now";
-  src: url("../font/helvetica.ttf");
+  src: url("/font/helvetica.ttf");
 }
 
 @font-face {
   font-family: "BMSpace";
-  src: url("../font/bmspace.ttf");
+  src: url("/font/bms.ttf");
 }
 
 @font-face {
   font-family: "Hopalope Bubble";
-  src: url("../font/hopalope.otf");
+  src: url("/font/hopalope.otf");
   font-weight: normal;
 }
 
