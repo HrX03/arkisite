@@ -13,17 +13,17 @@
 
 @font-face {
   font-family: "Helvetica Now";
-  src: url("/font/helvetica.ttf");
+  src: url("/font/helvetica.woff2");
 }
 
 @font-face {
   font-family: "BMSpace";
-  src: url("/font/bms.ttf");
+  src: url("/font/bms.woff2");
 }
 
 @font-face {
   font-family: "Hopalope Bubble";
-  src: url("/font/hopalope.otf");
+  src: url("/font/hopalope.woff2");
   font-weight: normal;
 }
 
@@ -138,7 +138,14 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 8px;
+  padding: 0px 16px;
+}
+
+#header-bar .gdc {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
 }
 
 #arki-footer {
@@ -159,9 +166,9 @@ textarea {
   gap: 16px;
 }
 
-.placeholder-48 {
-  width: 48px;
-  height: 48px;
+.placeholder-40 {
+  width: 40px;
+  height: 40px;
 }
 
 img.icon.contest {
