@@ -1,0 +1,119 @@
+html {
+    background-color: black;
+    color: white;
+}
+
+body {
+    background-color: #E7401D;
+}
+
+img.icon {
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(35deg) brightness(107%) contrast(101%);
+}
+
+h1 {
+    font-family: 'Hopalope Bubble';
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+h2, h3 {
+    font-family: 'BMSpace';
+    font-weight: 400;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+    font-variation-settings: 
+        "wdth" 100,
+        "wght" 400,
+        "opsz" 30;
+}
+
+p b {
+    font-variation-settings: 
+        "wdth" 100,
+        "wght" 700,
+        "opsz" 8;
+}
+
+#header-bar {
+    background-color: #E7401D;
+}
+
+#page-header .title-div {
+    width: 100%;
+    padding: 24px 16px;
+}
+
+#image-div {
+    position: relative;
+}
+
+#image-div .img-el {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 360 / 240;
+}
+
+#image-div .event-type-div {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+    width: 25%;
+    aspect-ratio: 1;
+    background-color: #E7401D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#image-div .event-type-div img {
+    width: 80%;
+    height: 80%;
+}
+
+#page-content {
+    padding: 24px 16px;
+}
+
+#download-box {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    bottom: 0;
+}
+
+#download-box .download-text {
+    flex: 4;
+    margin: 16px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+#download-box .download-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    background-color: #FBEA1B;
+    align-self: stretch;
+}
