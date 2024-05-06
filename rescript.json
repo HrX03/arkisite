@@ -1,0 +1,31 @@
+{
+  "name": "arkimastria",
+  "namespace": false,
+  "uncurried": true,
+  "jsx": {
+    "version": 4
+  },
+  "bs-dependencies": [
+    "@rescript/react",
+    "@rescript/core",
+    "rescript-webapi"
+  ],
+  "bsc-flags": [
+    "-open RescriptCore"
+  ],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "esmodule",
+    "in-source": false
+  },
+  "suffix": ".res.mjs",
+  "gentypeconfig": {
+    "language": "untyped",
+    "shims": []
+  }
+}
