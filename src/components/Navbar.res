@@ -1,20 +1,13 @@
-type navlink = {
-  icon: string,
-  alt: string,
-  sizeClass: string,
-  href?: string,
-}
-
-let linkFromNavlink = (link: navlink) => {
-  switch link.href {
-  | Some(href) =>
-    <Next.Link href>
-      <img src=link.icon alt=link.alt className={`icon ${link.sizeClass}`} />
-    </Next.Link>
-  | None =>
-    <div>
-      <img src=link.icon alt=link.alt className={`icon ${link.sizeClass}`} />
-    </div>
+module Navlink = {
+  @react.component
+  let make = (~icon, ~alt, ~sizeClass, ~href=?) => {
+    switch href {
+    | Some(href) =>
+      <Next.Link href>
+        <img src=icon alt className={`icon ${sizeClass}`} />
+      </Next.Link>
+    | None => <img src=icon alt className={`icon ${sizeClass}`} />
+    }
   }
 }
 
@@ -34,30 +27,14 @@ let make = (~path: list<string>) => {
 
   let (centerLink, rightLink) = switch gdc {
   | true => (
-      {
-        icon: "/static/img/gdc.svg",
-        alt: "GDC9.0 LOGO",
-        href: "/gdc",
-        sizeClass: "h-12",
-      },
-      {
-        icon: "/static/img/2024.svg",
-        alt: "GDC9.0 2024 LOGOTYPE",
-        sizeClass: "h-8",
-      },
+      <Navlink icon="/static/img/gdc.svg" alt="GDC9.0 LOGO" href="/gdc" sizeClass="h-12" />,
+      <Navlink icon="/static/img/2024.svg" alt="GDC9.0 2024 LOGOTYPE" sizeClass="h-8" />,
     )
   | false => (
-      {
-        icon: "/static/img/arki-text.svg",
-        alt: "Arkimastria Logotype",
-        href: "/",
-        sizeClass: "h-6",
-      },
-      {
-        icon: "/static/img/arki.svg",
-        alt: "Arkimastria Logo",
-        sizeClass: "h-12",
-      },
+      <Navlink
+        icon="/static/img/arki-text.svg" alt="Arkimastria Logotype" href="/" sizeClass="h-6"
+      />,
+      <Navlink icon="/static/img/arki.svg" alt="Arkimastria Logo" sizeClass="h-10" />,
     )
   }
 
@@ -70,19 +47,14 @@ let make = (~path: list<string>) => {
     } else {
       <div />
     }}
-    <div className="flex justify-between h-full px-4 items-center">
-      {linkFromNavlink({
-        icon: "/static/img/arki.svg",
-        alt: "Arkimastria Logo",
-        sizeClass: "h-10",
-      })}
-      /* <button>
-        <img src="/static/img/menu.svg" className="icon h-8" />
-      </button> */
-      {linkFromNavlink(rightLink)}
-    </div>
-    <div className="absolute top-0 flex justify-center w-full h-full items-center">
-      {linkFromNavlink(centerLink)}
+    <div className="max-w-2xl m-auto relative h-full">
+      <div className="flex justify-between h-full px-4 items-center">
+        <Navlink icon="/static/img/arki.svg" alt="Arkimastria Logo" sizeClass="h-10" />
+        rightLink
+      </div>
+      <div className="absolute top-0 flex justify-center w-full h-full items-center">
+        centerLink
+      </div>
     </div>
   </nav>
 }

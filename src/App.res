@@ -1,7 +1,3 @@
-// This type is based on the getInitialProps return value.
-// If you are using getServerSideProps or getStaticProps, you probably
-// will never need this
-// See https://nextjs.org/docs/advanced-features/custom-app
 type pageProps
 
 module PageComponent = {
@@ -14,9 +10,6 @@ type props = {
   pageProps: pageProps,
 }
 
-// We are not using `@react.component` since we will never
-// use <App/> within our ReScript code.
-// It's only used within `pages/_app.js`
 let default = (props: props): React.element => {
   let {component, pageProps} = props
 
@@ -24,13 +17,14 @@ let default = (props: props): React.element => {
   let content = React.createElement(component, pageProps)
   let path = router.asPath->Utils.splitPath->List.fromArray
 
+  open MobileLayout
   let pageLayout = switch path {
   | list{"gdc", ...rest} =>
     switch rest {
-    | list{"aicontest"} => MobileLayout.GDC({theme: MobileLayout.orangeGDC})
-    | _ => MobileLayout.GDC({theme: MobileLayout.blankGDC})
+    | list{"aicontest"} => GDC(Orange)
+    | _ => GDC(Blank)
     }
-  | _ => MobileLayout.Normal
+  | _ => Normal
   }
 
   <MobileLayout path pageLayout> content </MobileLayout>

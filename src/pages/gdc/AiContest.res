@@ -2,14 +2,22 @@ module DownloadBox = {
   @react.component
   let make = (~title, ~description, ~href) => {
     let download = href->Utils.splitPath->Array.last
-    <div className="bg-black text-white w-full flex flex-row sticky -bottom-[2px] border-b-2 border-white">
-      <div className=" flex-grow-[4] m-4 gap-2 flex flex-col justify-start items-start">
-        <h3>{React.string(title)}</h3>
-        <p>{React.string(description)}</p>
+    <div key="downloadbox" className="w-full sticky bottom-0 p-2">
+      <div
+        key="text"
+        className="bg-black text-white w-full flex flex-row">
+        <div className="flex-1 m-4 gap-2 flex flex-col justify-start items-start">
+          <h3> {React.string(title)} </h3>
+          <p> {React.string(description)} </p>
+        </div>
+        <a
+          key="download"
+          href
+          className="flex justify-center items-center w-20 bg-secondary self-stretch"
+          ?download>
+          <img src="/static/img/download-gdc.svg" alt="Download" />
+        </a>
       </div>
-      <a href className="flex justify-center items-center w-20 bg-secondary self-stretch" ?download>
-        <img src="/static/img/download-gdc.svg" alt="Download"/>
-      </a>
     </div>
   }
 }
@@ -52,20 +60,21 @@ let contents = {
 let default = () => {
   <>
     <Meta
+      key="meta"
       siteName="GDC9.0 AI Contest"
       description="Arkimastria, in occasione della Giornata del Colore 9.0, lancia la seconda edizione del Arkificial Intelligence Contest, un concorso di idee per l'architettura, realizzate attraverso l'uso dei software di intelligenza artificiale generativa."
       ogImage="/static/img/gdc/GDC9.0_AI Contest_Cover.webp"
     />
     <ArticleHeader
+      key="header"
       title="AI CONTEST"
       subtitle="Architettura\nEFFIMERA"
       image="/static/img/gdc/GDC9.0_AI Contest_Cover.webp"
       eventType=ArticleHeader.Contest
     />
-    <div className="p-4">
-      contents
-    </div>
+    <div key="content" className="p-4"> contents </div>
     <DownloadBox
+      key="downloadbox"
       title="Scarica il bando"
       description="Contiene tutte le informazioni per partecipare, scadenze e regole"
       href="https://drive.google.com/uc?export=download&id=1qbZkm9eHW9Zm375G69Kj4KW9Hx9u-JPr"
