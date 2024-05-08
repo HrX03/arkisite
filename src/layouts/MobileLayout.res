@@ -1,18 +1,10 @@
-type gdcTheme = Blank | Orange | Pink | Cyan | Yellow
-type pageLayout = Normal | GDC(gdcTheme)
+type pageLayout = Normal | GDC(GDCUtils.gdcTheme)
 
 @react.component
 let make = (~path, ~pageLayout, ~children) => {
   let pageTheme = switch pageLayout {
-  | Normal | GDC(Blank) => ""
-  | GDC(theme) =>
-    switch theme {
-    | Blank => ""
-    | Orange => "gdc-orange"
-    | Pink => "gdc-pink"
-    | Cyan => "gdc-cyan"
-    | Yellow => "gdc-yellow"
-    }
+  | Normal | GDC(GDCUtils.Blank) => ""
+  | GDC(theme) => GDCUtils.getClassForTheme(theme)
   }
 
   let fontClass = switch pageLayout {

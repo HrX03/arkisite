@@ -17,14 +17,16 @@ let default = (props: props): React.element => {
   let content = React.createElement(component, pageProps)
   let path = router.asPath->Utils.splitPath->List.fromArray
 
-  open MobileLayout
+  open GDCUtils
   let pageLayout = switch path {
   | list{"gdc", ...rest} =>
     switch rest {
-    | list{"aicontest"} => GDC(Orange)
-    | _ => GDC(Blank)
+    | list{"aicontest"} => MobileLayout.GDC(Orange)
+    | list{"dscontest"} => MobileLayout.GDC(Pink)
+    | list{} => MobileLayout.GDC(GDCUtils.Special)
+    | _ => MobileLayout.GDC(Blank)
     }
-  | _ => Normal
+  | _ => MobileLayout.Normal
   }
 
   <MobileLayout path pageLayout> content </MobileLayout>

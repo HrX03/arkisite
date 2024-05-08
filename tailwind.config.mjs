@@ -5,12 +5,19 @@ export default {
     './src/pages/**/*.res',
     './src/*.res',
   ],
+  safelist: [
+    'gdc-orange',
+    'gdc-pink',
+    'gdc-cyan',
+    'gdc-yellow',
+    'gdc-sp',
+  ],
   theme: {
     extend: {
       colors: {
-        "background": "var(--background-color)",
-        "foreground": "var(--foreground-color)",
-        "secondary": "var(--secondary-color)",
+        "background": "var(--bg-color)",
+        "foreground": "var(--fg-color)",
+        "secondary": "var(--snd-color)",
       },
     },
     /* Most of the time we customize the font-sizes,
