@@ -1,15 +1,61 @@
+@import "./_fonts.css";
+
 @tailwind base;
 @tailwind components;
-
-@import "./_fonts.css";
 
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background-color: #FFFFFF;
-    --foreground-color: #000000;
-    --secondary-color: #000000;
+    --bg-color: #FFFFFF;
+    --fg-color: #000000;
+    --snd-color: #000000;
+
+    --light-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(35deg) brightness(107%) contrast(101%);
+  }
+}
+
+@layer utilities {
+  .gdc-type {
+    h1 {
+      font-family: "Hopalope Bubble";
+      font-weight: 400;
+    }
+
+    h2, h3 {
+      font-family: "BM Space";
+      font-weight: 400;
+    }
+  }
+  
+  .gdc-orange {
+    --bg-color: #E7401D;
+    --fg-color: #FFFFFF;
+    --snd-color: #FBEA1B;
+  
+    img.icon {
+      filter: var(--light-filter);
+    }
+  }
+
+  .gdc-pink {
+    --bg-color: #F6B9C4;
+    --snd-color: #D7E8DD;
+  }
+
+  .gdc-cyan {
+    --bg-color: #D7E8DD;
+    --snd-color: #E7401D;
+  }
+
+  .gdc-yellow {
+    --bg-color: #FBEA1B;
+    --snd-color: #F6B9C4;
+  }
+
+  .gdc-sp {
+    --bg-color: #FBEA1B;
+    --snd-color: #FFFFFF;
   }
 }
 
@@ -34,7 +80,6 @@ body {
   margin: 0px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 600px;
 }
 
 h1,
@@ -48,7 +93,7 @@ p {
 }
 
 a {
-  color: black;
+  color: var(--foreground-color);
 }
 
 .link {

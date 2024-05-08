@@ -5,31 +5,20 @@ export default {
     './src/pages/**/*.res',
     './src/*.res',
   ],
+  safelist: [
+    'gdc-orange',
+    'gdc-pink',
+    'gdc-cyan',
+    'gdc-yellow',
+    'gdc-sp',
+  ],
   theme: {
     extend: {
       colors: {
-        "background": "var(--background-color)",
-        "foreground": "var(--foreground-color)",
-        "secondary": "var(--secondary-color)",
+        "background": "var(--bg-color)",
+        "foreground": "var(--fg-color)",
+        "secondary": "var(--snd-color)",
       },
-      typography: {
-        "gdc": {
-          css: {
-            h1: {
-              "font-family": "Hopalope Bubble",
-              "font-weight": 400,
-            },
-            h2: {
-              "font-family": "BM Space",
-              "font-weight": 400,
-            },
-            h3: {
-              "font-family": "BM Space",
-              "font-weight": 400,
-            },
-          }
-        }
-      }
     },
     /* Most of the time we customize the font-sizes,
      so we added the Tailwind default values here for
@@ -48,7 +37,7 @@ export default {
     },
     /* We override the default font-families with our own default prefs  */
     fontFamily: {
-      'sans': ['-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Arial', 'sans-serif'],
+      'sans': ['Helvetica Now', '-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Arial', 'sans-serif'],
       'serif': ['Georgia', '-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Arial', 'sans-serif'],
       'mono': ['Menlo', 'Monaco', 'Consolas', 'Roboto Mono', 'SFMono-Regular', 'Segoe UI', 'Courier', 'monospace']
     },
@@ -56,5 +45,5 @@ export default {
   variants: {
     width: ['responsive']
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [],
 }

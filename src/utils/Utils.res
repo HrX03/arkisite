@@ -17,3 +17,10 @@ let escaper = (strings: array<string>, parameters: array<string>): string => {
     acc ++ p ++ str
   })
 }
+
+let conditionalWrapper = (
+  ~wrapper: React.element => React.element,
+  ~children: React.element,
+): React.element => {
+  wrapper(children)
+}

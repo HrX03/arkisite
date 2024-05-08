@@ -62,11 +62,9 @@ let make = (
     <meta key="twitter:description" name="twitter:description" content=description />
     <meta key="twitter:site" name="twitter:site" content="@reasonml" />
     <meta key="twitter:creator" name="twitter:creator" content="@ReasonAssoc" />
-    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content="image/webp" />
     <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
     /* TODO: Undo this later */
     /* <meta key="twitter:image" property="twitter:image" content=ogImage /> */
-    <link rel="alternate" type_="application/rss+xml" title="ReScript Blog" href="/blog/feed.xml" />
-    // Docsearch meta tags
   </Head>
 }
