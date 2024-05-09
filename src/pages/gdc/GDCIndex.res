@@ -73,12 +73,12 @@ let default = () => {
         href="/gdc/aicontest"
       />
       <GDCPageCard
-        title="???"
-        subtitle="Coming soon!"
+        title="DS Contest"
+        subtitle="Una tavola, Uno sgabello"
         theme=GDCUtils.Pink
-        //eventType=EventInfo.Contest
-        //image="/static/img/gdc/GDC9.0_DS_Contest_Cover.webp"
-        //href="/gdc/dscontest"
+        eventType=EventInfo.Contest
+        image="/static/img/gdc/GDC9.0_DS_Contest_Cover.webp"
+        href="/gdc/dscontest"
       />
     </div>
   </>
