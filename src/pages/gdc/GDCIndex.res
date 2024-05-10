@@ -55,6 +55,7 @@ let default = () => {
     <Meta
       siteName="Arkimastria GDC9.0"
       description="Homepage per l'evento annuale GDC di Arkimastria a.s.a.p.d!"
+      ogImage="/static/img/gdc/GDC9.0_TitleCard.webp"
     />
     <div className="header w-full px-6 py-12 flex justify-center items-center">
       <img
