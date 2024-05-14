@@ -1,4 +1,4 @@
-import DSContestRes from "lib/es6/src/pages/gdc/DSContest.res.mjs";
+import DSContestRes from "src/pages/gdc/contest/DSContest.res.mjs";
 
 export default function AiContest(props) {
   return <DSContestRes {...props}/>;

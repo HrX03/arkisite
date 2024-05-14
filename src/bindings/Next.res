@@ -55,6 +55,49 @@ module GetStaticPaths = {
   type t<'params> = unit => promise<return<'params>>
 }
 
+module Cookies = {
+  type t
+
+  type cookie = {
+    name: string,
+    value: string,
+    \"Path": string,
+  }
+
+  @send external set: (t, string, string) => unit = "set"
+  @return(nullable) @send external get: (t, string) => option<cookie> = "get"
+  @send external getAll: t => array<cookie> = "getAll"
+  @send external getAllWith: (t, string) => array<cookie> = "getAll"
+  @send external delete: (t, string) => bool = "delete"
+  @send external clear: (t, unit) => unit = "clear"
+}
+
+module NextUrl = {
+  include Webapi.Url
+
+  @get external basePath: t => string = "basePath"
+  @return(nullable) @get external buildId: t => option<string> = "buildId"
+  @get external pathname: t => string = "pathname"
+}
+
+module Request = {
+  include Webapi.Fetch.Request
+
+  @get external cookies: t => Cookies.t = "cookies"
+  @get external nextUrl: t => NextUrl.t = "nextUrl"
+  @return(nullable) @get external ip: t => option<string> = "ip"
+}
+
+module Response = {
+  include Webapi.Fetch.Response
+
+  @module("next/server") @scope("NextResponse") external redirect: Webapi.Url.t => t = "redirect"
+  @module("next/server") @scope("NextResponse") external rewrite: Webapi.Url.t => t = "rewrite"
+  @module("next/server") @scope("NextResponse") external next: unit => t = "next"
+
+  @get external cookies: t => Cookies.t = "cookies"
+}
+
 module Link = {
   @module("next/link") @react.component
   external make: (

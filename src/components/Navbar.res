@@ -17,9 +17,8 @@ let make = (~path: list<string>) => {
   | list{"gdc", ...rest} => (
       true,
       switch rest {
-      | list{_} => false
-      | list{}
-      | _ => true
+      | list{_, ..._} => false
+      | list{} => true
       },
     )
   | _ => (false, false)

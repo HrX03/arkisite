@@ -1,4 +1,4 @@
-import AiContestRes from "lib/es6/src/pages/gdc/AiContest.res.mjs";
+import AiContestRes from "src/pages/gdc/contest/AiContest.res.mjs";
 
 export default function AiContest(props) {
   return <AiContestRes {...props}/>;
