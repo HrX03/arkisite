@@ -21,6 +21,7 @@ let default = (props: props): React.element => {
   let pageLayout = switch path {
   | list{"gdc", ...rest} =>
     switch rest {
+    | list{"cinemastria"} => MobileLayout.GDC(Black)
     | list{"contest", "aicontest"} => MobileLayout.GDC(Orange)
     | list{"contest", "dscontest"} => MobileLayout.GDC(Pink)
     | list{} => MobileLayout.GDC(GDCUtils.Special)

@@ -15,45 +15,56 @@ function $$default(props) {
   if (path && path.hd === "gdc") {
     var rest = path.tl;
     if (rest) {
-      if (rest.hd === "contest") {
-        var match = rest.tl;
-        if (match) {
-          switch (match.hd) {
-            case "aicontest" :
-                pageLayout = match.tl ? ({
-                      TAG: "GDC",
-                      _0: "Blank"
-                    }) : ({
-                      TAG: "GDC",
-                      _0: "Orange"
-                    });
-                break;
-            case "dscontest" :
-                pageLayout = match.tl ? ({
-                      TAG: "GDC",
-                      _0: "Blank"
-                    }) : ({
-                      TAG: "GDC",
-                      _0: "Pink"
-                    });
-                break;
-            default:
+      switch (rest.hd) {
+        case "cinemastria" :
+            pageLayout = rest.tl ? ({
+                  TAG: "GDC",
+                  _0: "Blank"
+                }) : ({
+                  TAG: "GDC",
+                  _0: "Black"
+                });
+            break;
+        case "contest" :
+            var match = rest.tl;
+            if (match) {
+              switch (match.hd) {
+                case "aicontest" :
+                    pageLayout = match.tl ? ({
+                          TAG: "GDC",
+                          _0: "Blank"
+                        }) : ({
+                          TAG: "GDC",
+                          _0: "Orange"
+                        });
+                    break;
+                case "dscontest" :
+                    pageLayout = match.tl ? ({
+                          TAG: "GDC",
+                          _0: "Blank"
+                        }) : ({
+                          TAG: "GDC",
+                          _0: "Pink"
+                        });
+                    break;
+                default:
+                  pageLayout = {
+                    TAG: "GDC",
+                    _0: "Blank"
+                  };
+              }
+            } else {
               pageLayout = {
                 TAG: "GDC",
                 _0: "Blank"
               };
-          }
-        } else {
+            }
+            break;
+        default:
           pageLayout = {
             TAG: "GDC",
             _0: "Blank"
           };
-        }
-      } else {
-        pageLayout = {
-          TAG: "GDC",
-          _0: "Blank"
-        };
       }
     } else {
       pageLayout = {

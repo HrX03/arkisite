@@ -4,6 +4,7 @@ import * as EventInfo from "../utils/EventInfo.res.mjs";
 import * as JsxRuntime from "react/jsx-runtime";
 
 function ArticleHeader(props) {
+  var subtitle = props.subtitle;
   var match = EventInfo.getEventImage(props.eventType);
   return JsxRuntime.jsxs("div", {
               children: [
@@ -13,10 +14,10 @@ function ArticleHeader(props) {
                               children: props.title,
                               className: "w-4/5"
                             }),
-                        JsxRuntime.jsx("h2", {
-                              children: props.subtitle,
-                              className: "w-4/5"
-                            })
+                        subtitle !== undefined ? JsxRuntime.jsx("h2", {
+                                children: subtitle,
+                                className: "w-4/5"
+                              }) : JsxRuntime.jsx(JsxRuntime.Fragment, {})
                       ],
                       className: "w-full px-4 py-6"
                     }),

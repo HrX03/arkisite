@@ -13,6 +13,8 @@ function getClassForTheme(theme) {
         return "gdc-cyan";
     case "Yellow" :
         return "gdc-yellow";
+    case "Black" :
+        return "gdc-black";
     case "Special" :
         return "gdc-sp";
     

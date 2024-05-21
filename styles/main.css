@@ -53,6 +53,16 @@
     --snd-color: #F6B9C4;
   }
 
+  .gdc-black {
+    --bg-color: #000000;
+    --fg-color: #FFFFFF;
+    --snd-color: #FBEA1B;
+  
+    img.icon {
+      filter: var(--light-filter);
+    }
+  }
+
   .gdc-sp {
     --bg-color: #FBEA1B;
     --snd-color: #FFFFFF;

@@ -14,6 +14,9 @@ let make = (~path, ~pageLayout, ~children) => {
 
   <div key="body" className={`h-full bg-background text-foreground ${fontClass} ${pageTheme}`}>
     <Navbar key="navbar" path />
+    /* <div key="breadcrumb" className="p-4">
+      <BreadcrumbBar path />
+    </div> */
     <div key="content" className="min-h-screen max-w-2xl m-auto"> children </div>
     <Footer key="footer" />
   </div>

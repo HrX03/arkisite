@@ -10,6 +10,7 @@ export default {
     'gdc-pink',
     'gdc-cyan',
     'gdc-yellow',
+    'gdc-black',
     'gdc-sp',
   ],
   theme: {

@@ -1,12 +1,17 @@
 module Navlink = {
   @react.component
-  let make = (~icon, ~alt, ~sizeClass, ~href=?) => {
+  let make = (~icon, ~alt, ~sizeClass, ~href=?, ~ignoreIconTheme=false) => {
+    let iconTheme = switch ignoreIconTheme {
+      | true => ""
+      | false => "icon"
+    }
+
     switch href {
     | Some(href) =>
       <Next.Link href>
-        <img src=icon alt className={`icon ${sizeClass}`} />
+        <img src=icon alt className={`${iconTheme} ${sizeClass}`} />
       </Next.Link>
-    | None => <img src=icon alt className={`icon ${sizeClass}`} />
+    | None => <img src=icon alt className={`${iconTheme} ${sizeClass}`} />
     }
   }
 }
@@ -17,8 +22,10 @@ let make = (~path: list<string>) => {
   | list{"gdc", ...rest} => (
       true,
       switch rest {
-      | list{_, ..._} => false
+      | list{"contest"}
+      | list{"cinemastria"}
       | list{} => true
+      | list{_, ..._} => false
       },
     )
   | _ => (false, false)
@@ -26,14 +33,14 @@ let make = (~path: list<string>) => {
 
   let (centerLink, rightLink) = switch gdc {
   | true => (
-      <Navlink icon="/static/img/gdc.svg" alt="GDC9.0 LOGO" href="/gdc" sizeClass="h-12" />,
-      <Navlink icon="/static/img/2024.svg" alt="GDC9.0 2024 LOGOTYPE" sizeClass="h-8" />,
+      <Navlink icon="/static/img/gdc.svg" alt="GDC9.0 LOGO" href="/gdc" sizeClass="h-12" ignoreIconTheme=gdcBg/>,
+      <Navlink icon="/static/img/2024.svg" alt="GDC9.0 2024 LOGOTYPE" sizeClass="h-8" ignoreIconTheme=gdcBg/>,
     )
   | false => (
       <Navlink
-        icon="/static/img/arki-text.svg" alt="Arkimastria Logotype" href="/" sizeClass="h-6"
+        icon="/static/img/arki-text.svg" alt="Arkimastria Logotype" href="/" sizeClass="h-6" ignoreIconTheme=gdcBg
       />,
-      <Navlink icon="/static/img/arki.svg" alt="Arkimastria Logo" sizeClass="h-10" />,
+      <Navlink icon="/static/img/arki.svg" alt="Arkimastria Logo" sizeClass="h-10" ignoreIconTheme=gdcBg/>,
     )
   }
 
@@ -48,7 +55,7 @@ let make = (~path: list<string>) => {
     }}
     <div className="max-w-2xl m-auto relative h-full">
       <div className="flex justify-between h-full px-4 items-center">
-        <Navlink icon="/static/img/arki.svg" alt="Arkimastria Logo" sizeClass="h-10" />
+        <Navlink icon="/static/img/arki.svg" alt="Arkimastria Logo" sizeClass="h-10" ignoreIconTheme=gdcBg/>
         rightLink
       </div>
       <div className="absolute top-0 flex justify-center w-full h-full items-center">

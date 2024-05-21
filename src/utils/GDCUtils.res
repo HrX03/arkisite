@@ -1,4 +1,4 @@
-type gdcTheme = Blank | Orange | Pink | Cyan | Yellow | Special
+type gdcTheme = Blank | Orange | Pink | Cyan | Yellow | Black | Special
 
 let getClassForTheme = theme =>
   switch theme {
@@ -7,5 +7,6 @@ let getClassForTheme = theme =>
   | Pink => "gdc-pink"
   | Cyan => "gdc-cyan"
   | Yellow => "gdc-yellow"
+  | Black => "gdc-black"
   | Special => "gdc-sp"
   }
