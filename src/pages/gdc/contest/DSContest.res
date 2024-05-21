@@ -28,7 +28,7 @@ let contents = {
   ${Strong(Str("3° CLASSIFICATO:"))}${NL}
   "Autoprogettazione" di Enzo Mari, un libro fondamentale che promuove il concetto di fare da s${Str("é")} nel design, fornendo le basi per la riscoperta delle proprie capacit${Str("à")} creative e manuali.${NL}${NL}
   ${Strong(Str("+ 1 Menzione d'onore"))}${NL}${NL}
-  ${Strong(Str("Tutti e 4 i vincitori potranno realizzare il proprio progetto dal vivo durante il workshop di Ebanisteria meccanica per la GDC9.0 l'11/06 presso la sede di Arkimastria."))}
+  ${Strong(Str("Tutti e 4 i vincitori potranno realizzare il proprio progetto dal vivo durante il workshop di Ebanisteria meccanica per la GDC9.0 il 10/06 presso la sede di Arkimastria."))}
   ${NL}
   ${NL}
   ${Header(Str("INFO PER LA CONSEGNA"))}

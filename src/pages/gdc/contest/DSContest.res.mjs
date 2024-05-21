@@ -237,7 +237,7 @@ var contents = Template.template([
         TAG: "Strong",
         _0: {
           TAG: "Str",
-          _0: "Tutti e 4 i vincitori potranno realizzare il proprio progetto dal vivo durante il workshop di Ebanisteria meccanica per la GDC9.0 l'11/06 presso la sede di Arkimastria."
+          _0: "Tutti e 4 i vincitori potranno realizzare il proprio progetto dal vivo durante il workshop di Ebanisteria meccanica per la GDC9.0 il 10/06 presso la sede di Arkimastria."
         }
       },
       "NL",
