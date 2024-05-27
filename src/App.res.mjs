@@ -60,6 +60,16 @@ function $$default(props) {
               };
             }
             break;
+        case "workshop" :
+            var match$1 = rest.tl;
+            pageLayout = match$1 && match$1.hd === "bluefriday" && !match$1.tl ? ({
+                  TAG: "GDC",
+                  _0: "Cyan"
+                }) : ({
+                  TAG: "GDC",
+                  _0: "Blank"
+                });
+            break;
         default:
           pageLayout = {
             TAG: "GDC",

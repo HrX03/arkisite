@@ -1,3 +1,5 @@
+import { transform } from "next/dist/build/swc";
+
 export default {
   content: [
     './src/components/**/*.res',
@@ -20,6 +22,28 @@ export default {
         "foreground": "var(--fg-color)",
         "secondary": "var(--snd-color)",
       },
+      keyframes: {
+        "marquee-gradient": {
+          from: {
+            transform: 'translateX(0%);'
+          },
+          to: {
+            transform: 'translateX(-672px);'
+          },
+        },
+        "marquee-gradient-re": {
+          from: {
+            transform: 'translateX(-672px);'
+          },
+          to: {
+            transform: 'translateX(0%);'
+          },
+        },
+      },
+      animation: {
+        "marquee-gradient": "marquee-gradient 5s infinite linear;",
+        "marquee-gradient-re": "marquee-gradient-re 5s infinite linear;",
+      }
     },
     /* Most of the time we customize the font-sizes,
      so we added the Tailwind default values here for
