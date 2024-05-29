@@ -25,6 +25,8 @@ let default = (props: props): React.element => {
     | list{"contest", "aicontest"} => MobileLayout.GDC(Orange)
     | list{"contest", "dscontest"} => MobileLayout.GDC(Pink)
     | list{"workshop", "bluefriday"} => MobileLayout.GDC(Cyan)
+    | list{"workshop", "dsworkshop"} => MobileLayout.GDC(Pink)
+    | list{"workshop", "linocutprint"} => MobileLayout.GDC(Yellow)
     | list{} => MobileLayout.GDC(GDCUtils.Special)
     | _ => MobileLayout.GDC(Blank)
     }

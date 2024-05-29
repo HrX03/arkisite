@@ -4,9 +4,19 @@ import * as Utils from "../utils/Utils.res.mjs";
 import * as Core__Array from "@rescript/core/src/Core__Array.res.mjs";
 import * as JsxRuntime from "react/jsx-runtime";
 
-function DownloadBox(props) {
+function FloatBox(props) {
+  var boxType = props.boxType;
   var href = props.href;
-  var download = Core__Array.last(Utils.splitPath(href));
+  var match;
+  match = boxType === "Download" ? [
+      "/static/img/download-gdc.svg",
+      "Download"
+    ] : [
+      "/static/img/whatsapp-gdc.svg",
+      "Chat WhatsApp"
+    ];
+  var download;
+  download = boxType === "Download" ? Core__Array.last(Utils.splitPath(href)) : undefined;
   return JsxRuntime.jsx("div", {
               children: JsxRuntime.jsxs("div", {
                     children: [
@@ -23,21 +33,21 @@ function DownloadBox(props) {
                           }),
                       JsxRuntime.jsx("a", {
                             children: JsxRuntime.jsx("img", {
-                                  alt: "Download",
-                                  src: "/static/img/download-gdc.svg"
+                                  alt: match[1],
+                                  src: match[0]
                                 }),
                             className: "flex justify-center items-center w-20 bg-secondary self-stretch",
                             download: download,
                             href: href
-                          }, "download")
+                          })
                     ],
                     className: "bg-black text-white w-full flex flex-row"
-                  }, "text"),
+                  }),
               className: "w-full sticky bottom-0 p-2"
-            }, "downloadbox");
+            });
 }
 
-var make = DownloadBox;
+var make = FloatBox;
 
 export {
   make ,

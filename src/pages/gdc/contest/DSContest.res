@@ -56,11 +56,12 @@ let default = () => {
       eventType=EventInfo.Contest
     />
     <div key="content" className="p-4"> contents </div>
-    <DownloadBox
+    <FloatBox
       key="downloadbox"
       title="Scarica il bando"
       description="Contiene tutte le informazioni per partecipare, scadenze e regole"
       href="https://drive.google.com/uc?export=download&id=1aE_6yhInGurtrEYovsQKQZbRRPADClU8"
+      boxType=FloatBox.Download
     />
   </>
 }

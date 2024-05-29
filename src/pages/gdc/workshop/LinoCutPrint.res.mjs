@@ -8,26 +8,27 @@ import * as ArticleHeader from "../../../components/ArticleHeader.res.mjs";
 import * as JsxRuntime from "react/jsx-runtime";
 
 var contents = Template.template([
-      "\r\n  BlueFriday ",
-      " il terzo workshop organizzato da Arkimastria in occasione della GDC9.0. Tenuto da Ginkgomag, ti insegner",
-      " ad utilizzare la tecnica della cianotipia per produrre stampe di alta qualit",
-      ".\r\n  ",
+      "\r\n  Il secondo workshop organizzato da Arkimastria in occasione della GDC9.0 ",
+      " dedicato alla linografia, una tecnica che permette di creare timbri che possono poi essere utilizzati per la stampa di disegni su vari superfici. Seguito da Caterina Pirisi, tattoo artist di Balduf",
+      "ra, il workshop ti insegner",
+      " le basi di questa antica tecnica.\r\n  ",
       "\r\n  ",
       "\r\n  ",
-      "\r\n  La cianotipia ",
-      " una tecnica fotografica alternativa, sviluppata nel XIX secolo, che utilizza una soluzione fotosensibile a base di ferro e acqua per creare immagini di un blu intenso su supporti come carta o tessuto.",
-      "\r\n  In questo workshop, esploreremo i fondamenti di questa affascinante tecnica artistica, aprendo le porte alla vostra creativit",
-      ".\r\n  ",
+      "\r\n  Il Lino Cutting and Printing ",
+      " una forma d'arte che combina la precisione del taglio del linoleum con la creativit",
+      " della stampa.",
+      "In questo evento, esploreremo le tecniche di incisione e stampa su linoleum, aprendo nuove possibilit",
+      " espressive per gli artisti e gli appassionati di grafica. \r\n  ",
       "\r\n  ",
       "\r\n  ",
       "\r\n  ",
-      " Introduzione alla storia e alla tecnica della cianotipia.",
+      " Introduzione alla tecnica di taglio del linoleum e alle sue potenzialit\xc3\xa0 artistiche.",
       "\r\n  ",
-      " Applicazione su supporti forniti o personali",
+      " Tecniche di incisione e preparazione del blocco di linoleum.",
       "\r\n  ",
-      " Utilizzo di oggetti tridimensionali e/o negativi fotografici per ottenere stampe uniche.",
+      " Utilizzo degli strumenti di taglio per creare disegni e pattern.",
       "\r\n  ",
-      " Esposizione e sviluppo delle stampe cianotipiche.\r\n  ",
+      " Stampa dei disegni incisi su carta.\r\n  ",
       "\r\n  ",
       "\r\n  ",
       "\r\n  ",
@@ -44,24 +45,15 @@ var contents = Template.template([
       " possibile iscriversi inviando ",
       " della page Instagram, oppure presso la nostra sede, piano terra del complesso Santa Chiara.",
       "\r\n  ",
-      " Siete incoraggiati a ",
-      ", come fiori, chiavi, giocattoli, o qualsiasi altra cosa abbia uno spessore. ",
-      ": forniremo tutto il necessario per creare le vostre stampe uniche. ",
-      "\r\n  ",
       " Il workshop si terr",
       " dalle ",
       " alle ",
-      " nel giardino dell'Asilo Sella, ",
+      " nello Student Hub di ",
       ".\r\n  ",
       "\r\n  ",
       "\r\n  ",
-      "\r\n  Ginkgo ",
-      " un collettivo interdisciplinare nato a Pistoia nel 2022 con lo scopo di creare nuovi spazi di connessione e dialogo e nuove modalit",
-      " di fruizione degli spazi gi",
-      " esistenti.",
-      "\r\n  Il primo progetto curato dal collettivo ",
-      " Ginkgomag, uno spazio editoriale aperto che affronta trimestralmente il tema della rigenerazione approcciandolo da un diverso punto di osservazione per ogni uscita.",
-      "\r\n  Inoltre, il gruppo cura e promuove progetti editoriali e iniziative artistiche e culturali.\r\n  "
+      "\r\n  Caterina Pirisi nasce a Montecchio Emilia nel 1990. Nel 2017 si diploma in Grafica d'Arte e Progettazione all'Accademia di Belle Arti di Sassari e nel 2018 consegue il Master di I livello in Illustrazione editoriale alla scuola Ars in Fabula di Macerata.",
+      "Nel 2021 comincia a tatuare, proseguendo il percorso artistico tra acquerelli, stampa artigianale su carta e stoffa, lavori in legno e Das e qualsiasi altra tecnica creativa +stuzzichi la sua fantasia.\r\n  "
     ], [
       {
         TAG: "Str",
@@ -69,7 +61,7 @@ var contents = Template.template([
       },
       {
         TAG: "Str",
-        _0: "à"
+        _0: "ù"
       },
       {
         TAG: "Str",
@@ -81,12 +73,16 @@ var contents = Template.template([
         TAG: "Header",
         _0: {
           TAG: "Str",
-          _0: "COS'E' LA CIANOTIPIA?"
+          _0: "COS'E' LA LINOGRAFIA?"
         }
       },
       {
         TAG: "Str",
         _0: "è"
+      },
+      {
+        TAG: "Str",
+        _0: "à"
       },
       "NL",
       {
@@ -142,7 +138,7 @@ var contents = Template.template([
         TAG: "Strong",
         _0: {
           TAG: "Str",
-          _0: "15 persone"
+          _0: "12 persone"
         }
       },
       "NL",
@@ -178,26 +174,7 @@ var contents = Template.template([
         TAG: "Strong",
         _0: {
           TAG: "Str",
-          _0: "\"BlueFriday\" nei DM"
-        }
-      },
-      "NL",
-      {
-        TAG: "Str",
-        _0: "•"
-      },
-      {
-        TAG: "Strong",
-        _0: {
-          TAG: "Str",
-          _0: "portare con voi oggetti di vario genere da cianotipare"
-        }
-      },
-      {
-        TAG: "Strong",
-        _0: {
-          TAG: "Str",
-          _0: "Se non avete nulla da portare, non preoccupatevi"
+          _0: "\"Linografia\" nei DM"
         }
       },
       "NL",
@@ -213,21 +190,21 @@ var contents = Template.template([
         TAG: "Strong",
         _0: {
           TAG: "Str",
-          _0: "15:30"
+          _0: "16:30"
         }
       },
       {
         TAG: "Strong",
         _0: {
           TAG: "Str",
-          _0: "18:00"
+          _0: "18:30"
         }
       },
       {
         TAG: "Strong",
         _0: {
           TAG: "Str",
-          _0: "Via Giuseppe Garibaldi 35 Alghero"
+          _0: "Piazza Santa Croce, Alghero"
         }
       },
       "NL",
@@ -239,61 +216,44 @@ var contents = Template.template([
           _0: "POWERED BY"
         }
       },
-      {
-        TAG: "Str",
-        _0: "è"
-      },
-      {
-        TAG: "Str",
-        _0: "à"
-      },
-      {
-        TAG: "Str",
-        _0: "à"
-      },
-      "NL",
-      {
-        TAG: "Str",
-        _0: "è"
-      },
       "NL"
     ]);
 
-function BlueFriday$default(props) {
+function LinoCutPrint$default(props) {
   return JsxRuntime.jsxs(JsxRuntime.Fragment, {
               children: [
                 JsxRuntime.jsx(Meta.make, {
-                      siteName: "GDC9.0 BlueFriday",
-                      description: "BlueFriday è il terzo workshop organizzato da Arkimastria in occasione della GDC9.0. Tenuto da Ginkgomag, ti insegnerà ad utilizzare la tecnica della cianotipia per produrre stampe di alta qualità.",
-                      ogImage: "/static/img/gdc/GDC9.0_BlueFriday_Cover.webp"
+                      siteName: "GDC9.0 Linografia",
+                      description: "Il secondo workshop organizzato da Arkimastria in occasione della GDC9.0 è dedicato alla linografia, una tecnica che permette di creare timbri che possono poi essere utilizzati per la stampa di disegni su vari superfici. Seguito da Caterina Pirisi, tattoo artist di Baldufùra, il workshop ti insegnerà le basi di questa antica tecnica.",
+                      ogImage: "/static/img/gdc/GDC9.0_LinoCutPrint_Cover.webp"
                     }, "meta"),
                 JsxRuntime.jsx(ArticleHeader.make, {
-                      title: "BlueFriday",
-                      subtitle: "Workshop Cianotipia",
-                      image: "/static/img/gdc/GDC9.0_BlueFriday_Cover.webp",
+                      title: "Linografia",
+                      subtitle: "Free workshop",
+                      image: "/static/img/gdc/GDC9.0_LinoCutPrint_Cover.webp",
                       eventType: "Workshop"
                     }, "header"),
                 JsxRuntime.jsxs(InfoBox.make, {
                       children: [
                         JsxRuntime.jsx(InfoBox.InfoRow.make, {
                               title: "Data",
-                              children: "14 Giugno 2024, Venerdì"
+                              children: "12 Giugno 2024, Mercoledì"
                             }),
                         JsxRuntime.jsx(InfoBox.InfoRow.make, {
                               title: "Ora",
-                              children: "Dalle 15:30 alle 18:00"
+                              children: "Dalle 16:30 alle 18:30"
                             }),
                         JsxRuntime.jsx(InfoBox.InfoRow.make, {
                               title: "Luogo",
-                              children: "Giardino Asilo Sella, Via Giuseppe Garibaldi 35"
+                              children: "Student Hub, Piazza Santa Croce AHO"
                             }),
                         JsxRuntime.jsx(InfoBox.InfoRow.make, {
                               title: "N. Partecipanti",
-                              children: "15"
+                              children: "12"
                             }),
                         JsxRuntime.jsx(InfoBox.InfoRow.make, {
                               title: "Organizzatore",
-                              children: "Ginkgo"
+                              children: "Caterina Pirisi"
                             })
                       ]
                     }),
@@ -311,7 +271,7 @@ function BlueFriday$default(props) {
             });
 }
 
-var $$default = BlueFriday$default;
+var $$default = LinoCutPrint$default;
 
 export {
   $$default as default,
