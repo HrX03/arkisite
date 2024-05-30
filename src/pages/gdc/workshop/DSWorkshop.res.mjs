@@ -334,8 +334,19 @@ function DSWorkshop$default(props) {
                       ]
                     }),
                 JsxRuntime.jsx("div", {
+                      className: "h-8"
+                    }),
+                JsxRuntime.jsx("div", {
+                      children: JsxRuntime.jsx("img", {
+                            className: "w-full max-w-sm h-full",
+                            alt: "Logo Ebanisteria Meccanica",
+                            src: "/static/img/ebanisteria-meccanica.svg"
+                          }),
+                      className: "flex justify-center items-center px-8"
+                    }),
+                JsxRuntime.jsx("div", {
                       children: contents,
-                      className: "p-4"
+                      className: "p-4 pt-8"
                     }, "content"),
                 JsxRuntime.jsx(FloatBox.make, {
                       title: "Unisciti alla chat WhatsApp",
