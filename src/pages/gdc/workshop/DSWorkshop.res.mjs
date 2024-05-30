@@ -2,7 +2,6 @@
 
 import * as Meta from "../../../components/Meta.res.mjs";
 import * as InfoBox from "../../../components/InfoBox.res.mjs";
-import * as FloatBox from "../../../components/FloatBox.res.mjs";
 import * as Template from "../../../utils/Template.res.mjs";
 import * as ArticleHeader from "../../../components/ArticleHeader.res.mjs";
 import * as JsxRuntime from "react/jsx-runtime";
@@ -38,9 +37,7 @@ var contents = Template.template([
       "\r\n  ",
       "\r\n  ",
       "\r\n  Ebanisteria Meccanica ",
-      " un brand sardo che fonda la propria produzione sulla tradizione artigiana della lavorazione del legno, alla quale unisce principi meccanici e ingegneristici che impreziosiscono i prodotti.",
-      "L'azienda progetta e realizza oggetti di design, arredo e utilit\xc3\xa0 ponendo cura nei dettagli, nelle materie prime e nel processo, rigorosamente \"fatto a mano\".",
-      "La produzione artigianale dell'Ebanisteria racconta non soltanto il territorio ma soprattutto la storia di una famiglia che crede nel lavoro delle mani come a un valore irrinunciabile.\r\n  ",
+      " un brand sardo basato sulla tradizione artigiana della lavorazione del legno, che progetta e realizza oggetti di design, arredo e utilit\xc3\xa0 ponendo cura nei dettagli, nelle materie prime e nel processo \"fatto a mano\".\r\n  ",
       "\r\n  ",
       "\r\n  ",
       "\r\n  ",
@@ -191,8 +188,6 @@ var contents = Template.template([
         TAG: "Str",
         _0: "è"
       },
-      "NL",
-      "NL",
       "NL",
       "NL",
       {
@@ -347,13 +342,7 @@ function DSWorkshop$default(props) {
                 JsxRuntime.jsx("div", {
                       children: contents,
                       className: "p-4 pt-8"
-                    }, "content"),
-                JsxRuntime.jsx(FloatBox.make, {
-                      title: "Unisciti alla chat WhatsApp",
-                      description: "Richiedi di entrare nella chat del workshop per prenotarti",
-                      href: "https://wikipedia.org/wiki/WhatsApp",
-                      boxType: "WhatsappChat"
-                    }, "downloadbox")
+                    }, "content")
               ]
             });
 }

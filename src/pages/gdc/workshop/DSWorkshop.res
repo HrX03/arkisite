@@ -13,7 +13,7 @@ let contents = {
   ${NL}
   ${NL}
   ${Header(Str("POWERED BY"))}
-  Ebanisteria Meccanica ${Str("è")} un brand sardo che fonda la propria produzione sulla tradizione artigiana della lavorazione del legno, alla quale unisce principi meccanici e ingegneristici che impreziosiscono i prodotti.${NL}L'azienda progetta e realizza oggetti di design, arredo e utilità ponendo cura nei dettagli, nelle materie prime e nel processo, rigorosamente "fatto a mano".${NL}La produzione artigianale dell'Ebanisteria racconta non soltanto il territorio ma soprattutto la storia di una famiglia che crede nel lavoro delle mani come a un valore irrinunciabile.
+  Ebanisteria Meccanica ${Str("è")} un brand sardo basato sulla tradizione artigiana della lavorazione del legno, che progetta e realizza oggetti di design, arredo e utilità ponendo cura nei dettagli, nelle materie prime e nel processo "fatto a mano".
   ${NL}
   ${NL}
   ${Header(Str("IL PROGRAMMA"))}
@@ -62,12 +62,12 @@ let default = () => {
       <img src="/static/img/ebanisteria-meccanica.svg" alt="Logo Ebanisteria Meccanica" className="w-full max-w-sm h-full"/>
     </div>
     <div key="content" className="p-4 pt-8"> contents </div>
-    <FloatBox
+    /* <FloatBox
       key="downloadbox"
       title="Unisciti alla chat WhatsApp"
       description="Richiedi di entrare nella chat del workshop per prenotarti"
       href="https://wikipedia.org/wiki/WhatsApp"
       boxType=FloatBox.WhatsappChat
-    />
+    /> */
   </>
 }
