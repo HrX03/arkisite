@@ -1,3 +1,5 @@
+import { transform } from "next/dist/build/swc";
+
 export default {
   content: [
     './src/components/**/*.res',

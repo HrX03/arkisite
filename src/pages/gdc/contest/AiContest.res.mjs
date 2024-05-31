@@ -2,64 +2,64 @@
 
 import * as Meta from "../../../components/Meta.res.mjs";
 import * as Utils from "../../../utils/Utils.res.mjs";
+import * as FloatBox from "../../../components/FloatBox.res.mjs";
 import * as Template from "../../../utils/Template.res.mjs";
-import * as DownloadBox from "../../../components/DownloadBox.res.mjs";
 import * as ArticleHeader from "../../../components/ArticleHeader.res.mjs";
 import * as JsxRuntime from "react/jsx-runtime";
 
 var contents = Template.template([
-      "\r\n  Arkimastria, in occasione della Giornata del Colore 9.0, lancia la seconda edizione del Arkificial Intelligence Contest, un concorso di idee per l'architettura, realizzate attraverso l'uso dei software di intelligenza artificiale generativa.\r\n  ",
-      "\r\n  ",
-      "\r\n  ",
-      "\r\n  Il ",
+      "\r\n\r\n  Arkimastria, in occasione della Giornata del Colore 9.0, lancia la seconda edizione del Arkificial Intelligence Contest, un concorso di idee per l'architettura, realizzate attraverso l'uso dei software di intelligenza artificiale generativa.\r\n\r\n  ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  Il ",
       " scelto per la GDC di quest'anno ",
-      " riassunto nel titolo \"noMADE\" in doppia accezione italiana e inglese (nomade e non fatto/abbandonato).\r\n  ",
-      "\r\n  Caratteristica del nomadismo ",
-      " l'esistenza transitoria dell'individuo attraverso gli spazi ed i luoghi.\r\n  ",
-      "\r\n  In questo senso, il contest si propone di esplorare il progetto di architettura attraverso i temi dell'effimero.",
+      " riassunto nel titolo \"noMADE\" in doppia accezione italiana e inglese (nomade e non fatto/abbandonato).\r\n\r\n  ",
+      "\r\n\r\n  Caratteristica del nomadismo ",
+      " l'esistenza transitoria dell'individuo attraverso gli spazi ed i luoghi.\r\n\r\n  ",
+      "\r\n\r\n  In questo senso, il contest si propone di esplorare il progetto di architettura attraverso i temi dell'effimero.",
       " ",
       " ",
-      " un termine che si riferisce a qualcosa di appunto transitorio, passeggero o di breve durata.\r\n  ",
-      "\r\n  L'effimerit",
+      " un termine che si riferisce a qualcosa di appunto transitorio, passeggero o di breve durata.\r\n\r\n  ",
+      "\r\n\r\n  L'effimerit",
       " pu",
-      " essere associata a esperienze, oggetti o concetti che sono fugaci o temporanei, spesso caratterizzati dalla loro natura di passaggio e dalla loro tendenza a scomparire rapidamente, o ad essere dimenticati/ricordati nel tempo.\r\n  ",
-      "\r\n  ",
-      "\r\n  ",
-      "\r\n  ",
+      " essere associata a esperienze, oggetti o concetti che sono fugaci o temporanei, spesso caratterizzati dalla loro natura di passaggio e dalla loro tendenza a scomparire rapidamente, o ad essere dimenticati/ricordati nel tempo.\r\n\r\n  ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  ",
       " Il concorso ",
       " ",
       " gli studenti e a tutti gli appassionati di architettura, designer, artisti e creativi in generale.",
-      "\r\n  ",
+      "\r\n\r\n  ",
       " ",
       " specifica ma solo passione e curiosit",
       ".",
-      "\r\n  ",
+      "\r\n\r\n  ",
       " Si pu",
       " partecipare ",
       " (",
-      " membri per team).\r\n  ",
-      "\r\n  ",
-      "\r\n  ",
-      "\r\n  ",
+      " membri per team).\r\n\r\n  ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  ",
       " Ticket full pass 4 giorni Red Valley",
-      "\r\n  ",
+      "\r\n\r\n  ",
       " Buono tatuaggi di ",
       "100 presso Baldufura",
-      "\r\n  ",
+      "\r\n\r\n  ",
       " Buono dal valore di ",
       "50 per la libreria Il Labirinto",
-      "\r\n  ",
-      "\r\n  ",
-      "\r\n  ",
-      "\r\n  ",
-      "\r\n  Deadline: ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  Deadline: ",
       "",
-      "\r\n  Indirizzo email: ",
-      "\r\n  ",
-      "\r\n  ",
-      "\r\n  ",
-      "\r\n  ",
-      "\r\n  "
+      "\r\n\r\n  Indirizzo email: ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  ",
+      "\r\n\r\n  "
     ], [
       "NL",
       "NL",
@@ -235,7 +235,7 @@ var contents = Template.template([
         TAG: "Strong",
         _0: {
           TAG: "Str",
-          _0: "30 MAGGIO ORE 23:59"
+          _0: "2 GIUGNO ORE 23:59"
         }
       },
       "NL",
@@ -280,10 +280,11 @@ function $$default() {
                       children: contents,
                       className: "p-4"
                     }, "content"),
-                JsxRuntime.jsx(DownloadBox.make, {
+                JsxRuntime.jsx(FloatBox.make, {
                       title: "Scarica il bando",
                       description: "Contiene tutte le informazioni per partecipare, scadenze e regole",
-                      href: "https://drive.google.com/uc?export=download&id=1qbZkm9eHW9Zm375G69Kj4KW9Hx9u-JPr"
+                      href: "https://drive.google.com/uc?export=download&id=1qbZkm9eHW9Zm375G69Kj4KW9Hx9u-JPr",
+                      boxType: "Download"
                     }, "downloadbox")
               ]
             });

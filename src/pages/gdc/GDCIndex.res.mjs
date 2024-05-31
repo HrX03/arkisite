@@ -5,6 +5,7 @@ import * as Utils from "../../utils/Utils.res.mjs";
 import * as GDCUtils from "../../utils/GDCUtils.res.mjs";
 import * as EventInfo from "../../utils/EventInfo.res.mjs";
 import Link from "next/link";
+import * as Core__Option from "@rescript/core/src/Core__Option.res.mjs";
 import * as JsxRuntime from "react/jsx-runtime";
 
 function GDCIndex$GDCPageCard(props) {
@@ -46,7 +47,7 @@ function GDCIndex$GDCPageCard(props) {
                     JsxRuntime.jsxs("div", {
                           children: [
                             image !== undefined ? JsxRuntime.jsx("img", {
-                                    className: "w-full h-36 object-cover",
+                                    className: "w-full h-36 object-cover " + Core__Option.getOr(props.objectAlignment, ""),
                                     alt: title + " cover",
                                     src: image
                                   }) : JsxRuntime.jsx("div", {}),
@@ -102,12 +103,29 @@ function GDCIndex$default(props) {
                 JsxRuntime.jsxs("div", {
                       children: [
                         JsxRuntime.jsx(GDCIndex$GDCPageCard, {
+                              title: "Ebanisteria Meccanica",
+                              subtitle: "Free workshop Design Spartano",
+                              theme: "Pink",
+                              eventType: "Workshop",
+                              image: "/static/img/gdc/GDC9.0_DSWorkshop_Cover.webp",
+                              href: "/gdc/workshop/dsworkshop",
+                              objectAlignment: "object-top"
+                            }),
+                        JsxRuntime.jsx(GDCIndex$GDCPageCard, {
+                              title: "Linografia",
+                              subtitle: "Free workshop",
+                              theme: "Yellow",
+                              eventType: "Workshop",
+                              image: "/static/img/gdc/GDC9.0_LinoCutPrint_Cover.webp",
+                              href: "/gdc/workshop/linocutprint"
+                            }),
+                        JsxRuntime.jsx(GDCIndex$GDCPageCard, {
                               title: "Ai Contest",
                               subtitle: "Architettura EFFIMERA",
                               theme: "Orange",
                               eventType: "Contest",
                               image: "/static/img/gdc/GDC9.0_AI_Contest_Cover.webp",
-                              href: "/gdc/aicontest"
+                              href: "/gdc/contest/aicontest"
                             }),
                         JsxRuntime.jsx(GDCIndex$GDCPageCard, {
                               title: "DS Contest",
@@ -115,7 +133,7 @@ function GDCIndex$default(props) {
                               theme: "Pink",
                               eventType: "Contest",
                               image: "/static/img/gdc/GDC9.0_DS_Contest_Cover.webp",
-                              href: "/gdc/dscontest"
+                              href: "/gdc/contest/dscontest"
                             })
                       ],
                       className: "flex flex-col gap-2 pb-32"

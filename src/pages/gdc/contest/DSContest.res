@@ -32,7 +32,7 @@ let contents = {
   ${NL}
   ${NL}
   ${Header(Str("INFO PER LA CONSEGNA"))}
-  Deadline: ${Strong(Str("30 MAGGIO ORE 23:59"))}${NL}
+  Deadline: ${Strong(Str("2 GIUGNO ORE 23:59"))}${NL}
   Indirizzo email: ${Link("mailto:asap.arkimastria@yahoo.it", Strong(Str("asap.arkimastria@yahoo.it")))}
   ${NL}
   ${NL}
@@ -56,11 +56,12 @@ let default = () => {
       eventType=EventInfo.Contest
     />
     <div key="content" className="p-4"> contents </div>
-    <DownloadBox
+    <FloatBox
       key="downloadbox"
       title="Scarica il bando"
       description="Contiene tutte le informazioni per partecipare, scadenze e regole"
       href="https://drive.google.com/uc?export=download&id=1aE_6yhInGurtrEYovsQKQZbRRPADClU8"
+      boxType=FloatBox.Download
     />
   </>
 }

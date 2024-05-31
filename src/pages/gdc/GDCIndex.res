@@ -1,6 +1,6 @@
 module GDCPageCard = {
   @react.component
-  let make = (~title, ~subtitle, ~theme, ~eventType=?, ~image=?, ~href=?) => {
+  let make = (~title, ~subtitle, ~theme, ~eventType=?, ~image=?, ~href=?, ~objectAlignment=?) => {
     let themeClass = GDCUtils.getClassForTheme(theme)
     Utils.conditionalWrapper(
       ~wrapper=children => {
@@ -15,7 +15,7 @@ module GDCPageCard = {
           <div className="relative">
             {switch image {
             | Some(image) => <img
-                src=image alt={`${title} cover`} className="w-full h-36 object-cover"
+                src=image alt={`${title} cover`} className=`w-full h-36 object-cover ${objectAlignment->Option.getOr("")}`
               />
             | None => <div />
             }}
@@ -66,12 +66,38 @@ let default = () => {
     </div>
     <div className="flex flex-col gap-2 pb-32">
       <GDCPageCard
+        title="Ebanisteria Meccanica"
+        subtitle="Free workshop Design Spartano"
+        theme=GDCUtils.Pink
+        eventType=EventInfo.Workshop
+        image="/static/img/gdc/GDC9.0_DSWorkshop_Cover.webp"
+        href="/gdc/workshop/dsworkshop"
+        objectAlignment="object-top"
+      />
+      <GDCPageCard
+        title="Linografia"
+        subtitle="Free workshop"
+        theme=GDCUtils.Yellow
+        eventType=EventInfo.Workshop
+        image="/static/img/gdc/GDC9.0_LinoCutPrint_Cover.webp"
+        href="/gdc/workshop/linocutprint"
+      />
+      /* <GDCPageCard
+        title="BlueFriday"
+        subtitle="Free workshop cianotipia"
+        theme=GDCUtils.Cyan
+        eventType=EventInfo.Workshop
+        image="/static/img/gdc/GDC9.0_BlueFriday_Cover.webp"
+        href="/gdc/workshop/bluefriday"
+        objectAlignment="object-bottom"
+      /> */
+      <GDCPageCard
         title="Ai Contest"
         subtitle="Architettura EFFIMERA"
         theme=GDCUtils.Orange
         eventType=EventInfo.Contest
         image="/static/img/gdc/GDC9.0_AI_Contest_Cover.webp"
-        href="/gdc/aicontest"
+        href="/gdc/contest/aicontest"
       />
       <GDCPageCard
         title="DS Contest"
@@ -79,7 +105,7 @@ let default = () => {
         theme=GDCUtils.Pink
         eventType=EventInfo.Contest
         image="/static/img/gdc/GDC9.0_DS_Contest_Cover.webp"
-        href="/gdc/dscontest"
+        href="/gdc/contest/dscontest"
       />
     </div>
   </>

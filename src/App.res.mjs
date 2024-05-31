@@ -60,6 +60,50 @@ function $$default(props) {
               };
             }
             break;
+        case "workshop" :
+            var match$1 = rest.tl;
+            if (match$1) {
+              switch (match$1.hd) {
+                case "bluefriday" :
+                    pageLayout = match$1.tl ? ({
+                          TAG: "GDC",
+                          _0: "Blank"
+                        }) : ({
+                          TAG: "GDC",
+                          _0: "Cyan"
+                        });
+                    break;
+                case "dsworkshop" :
+                    pageLayout = match$1.tl ? ({
+                          TAG: "GDC",
+                          _0: "Blank"
+                        }) : ({
+                          TAG: "GDC",
+                          _0: "Pink"
+                        });
+                    break;
+                case "linocutprint" :
+                    pageLayout = match$1.tl ? ({
+                          TAG: "GDC",
+                          _0: "Blank"
+                        }) : ({
+                          TAG: "GDC",
+                          _0: "Yellow"
+                        });
+                    break;
+                default:
+                  pageLayout = {
+                    TAG: "GDC",
+                    _0: "Blank"
+                  };
+              }
+            } else {
+              pageLayout = {
+                TAG: "GDC",
+                _0: "Blank"
+              };
+            }
+            break;
         default:
           pageLayout = {
             TAG: "GDC",
