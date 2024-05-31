@@ -2,6 +2,7 @@
 
 import * as Meta from "../../../components/Meta.res.mjs";
 import * as InfoBox from "../../../components/InfoBox.res.mjs";
+import * as FloatBox from "../../../components/FloatBox.res.mjs";
 import * as Template from "../../../utils/Template.res.mjs";
 import * as ArticleHeader from "../../../components/ArticleHeader.res.mjs";
 import * as JsxRuntime from "react/jsx-runtime";
@@ -342,7 +343,13 @@ function DSWorkshop$default(props) {
                 JsxRuntime.jsx("div", {
                       children: contents,
                       className: "p-4 pt-8"
-                    }, "content")
+                    }, "content"),
+                JsxRuntime.jsx(FloatBox.make, {
+                      title: "Unisciti alla chat WhatsApp",
+                      description: "Richiedi di entrare nella chat del workshop per prenotarti",
+                      href: "https://chat.whatsapp.com/Cci3RYr8QyxBKV0lFgHa36",
+                      boxType: "WhatsappChat"
+                    }, "downloadbox")
               ]
             });
 }

@@ -253,7 +253,7 @@ var contents = Template.template([
         TAG: "Strong",
         _0: {
           TAG: "Str",
-          _0: "30 MAGGIO ORE 23:59"
+          _0: "2 GIUGNO ORE 23:59"
         }
       },
       "NL",

@@ -32,7 +32,7 @@ let contents = {
   ${NL}
   ${NL}
   ${Header(Str("INFO PER LA CONSEGNA"))}
-  Deadline: ${Strong(Str("30 MAGGIO ORE 23:59"))}${NL}
+  Deadline: ${Strong(Str("2 GIUGNO ORE 23:59"))}${NL}
   Indirizzo email: ${Link("mailto:asap.arkimastria@yahoo.it", Strong(Str("asap.arkimastria@yahoo.it")))}
   ${NL}
   ${NL}

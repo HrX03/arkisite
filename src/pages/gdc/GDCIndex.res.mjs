@@ -112,6 +112,14 @@ function GDCIndex$default(props) {
                               objectAlignment: "object-top"
                             }),
                         JsxRuntime.jsx(GDCIndex$GDCPageCard, {
+                              title: "Linografia",
+                              subtitle: "Free workshop",
+                              theme: "Yellow",
+                              eventType: "Workshop",
+                              image: "/static/img/gdc/GDC9.0_LinoCutPrint_Cover.webp",
+                              href: "/gdc/workshop/linocutprint"
+                            }),
+                        JsxRuntime.jsx(GDCIndex$GDCPageCard, {
                               title: "Ai Contest",
                               subtitle: "Architettura EFFIMERA",
                               theme: "Orange",

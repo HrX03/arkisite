@@ -264,7 +264,7 @@ function LinoCutPrint$default(props) {
                 JsxRuntime.jsx(FloatBox.make, {
                       title: "Unisciti alla chat WhatsApp",
                       description: "Richiedi di entrare nella chat del workshop per prenotarti",
-                      href: "https://wikipedia.org/wiki/WhatsApp",
+                      href: "https://chat.whatsapp.com/Hl1lQP97B6AKuAmTG9Unin",
                       boxType: "WhatsappChat"
                     }, "downloadbox")
               ]

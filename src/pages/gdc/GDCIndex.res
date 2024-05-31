@@ -74,14 +74,14 @@ let default = () => {
         href="/gdc/workshop/dsworkshop"
         objectAlignment="object-top"
       />
-      /* <GDCPageCard
+      <GDCPageCard
         title="Linografia"
         subtitle="Free workshop"
         theme=GDCUtils.Yellow
         eventType=EventInfo.Workshop
         image="/static/img/gdc/GDC9.0_LinoCutPrint_Cover.webp"
         href="/gdc/workshop/linocutprint"
-      /> */
+      />
       /* <GDCPageCard
         title="BlueFriday"
         subtitle="Free workshop cianotipia"
