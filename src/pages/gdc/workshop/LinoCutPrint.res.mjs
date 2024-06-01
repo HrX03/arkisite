@@ -258,8 +258,19 @@ function LinoCutPrint$default(props) {
                       ]
                     }),
                 JsxRuntime.jsx("div", {
+                      className: "h-8"
+                    }),
+                JsxRuntime.jsx("div", {
+                      children: JsxRuntime.jsx("img", {
+                            className: "w-full max-h-64 h-full",
+                            alt: "Logo MondoDentro",
+                            src: "/static/img/mondodentro.svg"
+                          }),
+                      className: "flex justify-center items-center px-8"
+                    }),
+                JsxRuntime.jsx("div", {
                       children: contents,
-                      className: "p-4"
+                      className: "p-4 pt-8"
                     }, "content"),
                 JsxRuntime.jsx(FloatBox.make, {
                       title: "Unisciti alla chat WhatsApp",

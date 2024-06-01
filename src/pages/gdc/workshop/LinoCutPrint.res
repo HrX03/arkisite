@@ -51,7 +51,11 @@ let default = () => {
       <InfoBox.InfoRow title="N. Partecipanti">"12"</InfoBox.InfoRow>
       <InfoBox.InfoRow title="Organizzatore">"Caterina Pirisi"</InfoBox.InfoRow>
     </InfoBox>
-    <div key="content" className="p-4"> contents </div>
+    <div className="h-8" />
+    <div className="flex justify-center items-center px-8">
+      <img src="/static/img/mondodentro.svg" alt="Logo MondoDentro" className="w-full max-h-64 h-full"/>
+    </div>
+    <div key="content" className="p-4 pt-8"> contents </div>
     <FloatBox
       key="downloadbox"
       title="Unisciti alla chat WhatsApp"

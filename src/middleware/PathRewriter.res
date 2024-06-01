@@ -1,7 +1,6 @@
 let redirectMap = [
   ("/gdc/aicontest", "/gdc/contest/aicontest"),
   ("/gdc/dscontest", "/gdc/contest/dscontest"),
-  ("/gdc/workshop/bluefriday", "/404"),
 ]
 
 let handler = async request => {

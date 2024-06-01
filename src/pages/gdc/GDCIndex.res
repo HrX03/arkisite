@@ -82,7 +82,7 @@ let default = () => {
         image="/static/img/gdc/GDC9.0_LinoCutPrint_Cover.webp"
         href="/gdc/workshop/linocutprint"
       />
-      /* <GDCPageCard
+      <GDCPageCard
         title="BlueFriday"
         subtitle="Free workshop cianotipia"
         theme=GDCUtils.Cyan
@@ -90,7 +90,7 @@ let default = () => {
         image="/static/img/gdc/GDC9.0_BlueFriday_Cover.webp"
         href="/gdc/workshop/bluefriday"
         objectAlignment="object-bottom"
-      /> */
+      />
       <GDCPageCard
         title="Ai Contest"
         subtitle="Architettura EFFIMERA"
