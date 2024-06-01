@@ -11,10 +11,6 @@ var redirectMap = [
   [
     "/gdc/dscontest",
     "/gdc/contest/dscontest"
-  ],
-  [
-    "/gdc/workshop/bluefriday",
-    "/404"
   ]
 ];
 

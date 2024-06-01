@@ -120,6 +120,15 @@ function GDCIndex$default(props) {
                               href: "/gdc/workshop/linocutprint"
                             }),
                         JsxRuntime.jsx(GDCIndex$GDCPageCard, {
+                              title: "BlueFriday",
+                              subtitle: "Free workshop cianotipia",
+                              theme: "Cyan",
+                              eventType: "Workshop",
+                              image: "/static/img/gdc/GDC9.0_BlueFriday_Cover.webp",
+                              href: "/gdc/workshop/bluefriday",
+                              objectAlignment: "object-bottom"
+                            }),
+                        JsxRuntime.jsx(GDCIndex$GDCPageCard, {
                               title: "Ai Contest",
                               subtitle: "Architettura EFFIMERA",
                               theme: "Orange",
