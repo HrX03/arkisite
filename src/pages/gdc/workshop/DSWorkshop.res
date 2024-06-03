@@ -62,12 +62,12 @@ let default = () => {
       <img src="/static/img/ebanisteria-meccanica.svg" alt="Logo Ebanisteria Meccanica" className="w-full max-w-sm h-full"/>
     </div>
     <div key="content" className="p-4 pt-8"> contents </div>
-    <FloatBox
+    <ActionBox
       key="downloadbox"
       title="Unisciti alla chat WhatsApp"
       description="Richiedi di entrare nella chat del workshop per prenotarti"
       href="https://chat.whatsapp.com/Cci3RYr8QyxBKV0lFgHa36"
-      boxType=FloatBox.WhatsappChat
+      boxType=ActionBox.WhatsappChat
     />
   </>
 }

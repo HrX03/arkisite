@@ -64,6 +64,14 @@ let default = () => {
         className="w-full max-w-[504px]"
       />
     </div>
+    <ActionBox
+      title="SCARICA IL PROGRAMMA"
+      description="È stato pubblicato il programma definitivo con la descrizione di giornate, eventi, ospiti, concetti e molto altro! Dagli un’occhiata!!!"
+      href="https://drive.google.com/uc?export=download&id=1ADDRXCkbZ7bo8P8gnCNPVnFFsYNbrTex"
+      boxType=ActionBox.Download
+      shouldFloat=false
+    />
+    <div className="h-2"/>
     <div className="flex flex-col gap-2 pb-32">
       <GDCPageCard
         title="Ebanisteria Meccanica"
