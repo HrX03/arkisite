@@ -3,6 +3,7 @@
 import * as Meta from "../../components/Meta.res.mjs";
 import * as Utils from "../../utils/Utils.res.mjs";
 import * as GDCUtils from "../../utils/GDCUtils.res.mjs";
+import * as ActionBox from "../../components/ActionBox.res.mjs";
 import * as EventInfo from "../../utils/EventInfo.res.mjs";
 import Link from "next/link";
 import * as Core__Option from "@rescript/core/src/Core__Option.res.mjs";
@@ -99,6 +100,16 @@ function GDCIndex$default(props) {
                             src: "/static/img/gdc-ill.svg"
                           }),
                       className: "header w-full px-6 py-12 flex justify-center items-center"
+                    }),
+                JsxRuntime.jsx(ActionBox.make, {
+                      title: "SCARICA IL PROGRAMMA",
+                      description: "È stato pubblicato il programma definitivo con la descrizione di giornate, eventi, ospiti, concetti e molto altro! Dagli un’occhiata!!!",
+                      href: "https://drive.google.com/uc?export=download&id=1ADDRXCkbZ7bo8P8gnCNPVnFFsYNbrTex",
+                      boxType: "Download",
+                      shouldFloat: false
+                    }),
+                JsxRuntime.jsx("div", {
+                      className: "h-2"
                     }),
                 JsxRuntime.jsxs("div", {
                       children: [

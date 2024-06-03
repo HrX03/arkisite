@@ -2,8 +2,8 @@
 
 import * as Meta from "../../../components/Meta.res.mjs";
 import * as InfoBox from "../../../components/InfoBox.res.mjs";
-import * as FloatBox from "../../../components/FloatBox.res.mjs";
 import * as Template from "../../../utils/Template.res.mjs";
+import * as ActionBox from "../../../components/ActionBox.res.mjs";
 import * as ArticleHeader from "../../../components/ArticleHeader.res.mjs";
 import * as JsxRuntime from "react/jsx-runtime";
 
@@ -272,7 +272,7 @@ function LinoCutPrint$default(props) {
                       children: contents,
                       className: "p-4 pt-8"
                     }, "content"),
-                JsxRuntime.jsx(FloatBox.make, {
+                JsxRuntime.jsx(ActionBox.make, {
                       title: "Unisciti alla chat WhatsApp",
                       description: "Richiedi di entrare nella chat del workshop per prenotarti",
                       href: "https://chat.whatsapp.com/Hl1lQP97B6AKuAmTG9Unin",

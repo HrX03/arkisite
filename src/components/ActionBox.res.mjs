@@ -4,9 +4,11 @@ import * as Utils from "../utils/Utils.res.mjs";
 import * as Core__Array from "@rescript/core/src/Core__Array.res.mjs";
 import * as JsxRuntime from "react/jsx-runtime";
 
-function FloatBox(props) {
+function ActionBox(props) {
+  var __shouldFloat = props.shouldFloat;
   var boxType = props.boxType;
   var href = props.href;
+  var shouldFloat = __shouldFloat !== undefined ? __shouldFloat : false;
   var match;
   match = boxType === "Download" ? [
       "/static/img/download-gdc.svg",
@@ -17,6 +19,7 @@ function FloatBox(props) {
     ];
   var download;
   download = boxType === "Download" ? Core__Array.last(Utils.splitPath(href)) : undefined;
+  var className = shouldFloat ? "w-full sticky bottom-0 p-2" : "w-full";
   return JsxRuntime.jsx("div", {
               children: JsxRuntime.jsxs("div", {
                     children: [
@@ -43,11 +46,11 @@ function FloatBox(props) {
                     ],
                     className: "bg-black text-white w-full flex flex-row"
                   }),
-              className: "w-full sticky bottom-0 p-2"
+              className: className
             });
 }
 
-var make = FloatBox;
+var make = ActionBox;
 
 export {
   make ,

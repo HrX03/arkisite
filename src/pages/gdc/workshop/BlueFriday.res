@@ -60,12 +60,12 @@ let default = () => {
       <img src="/static/img/ginkgomag.svg" alt="Logo Ginkgomag" className="w-full max-w-sm h-full"/>
     </div>
     <div key="content" className="p-4 pt-8"> contents </div>
-    <FloatBox
+    <ActionBox
       key="downloadbox"
       title="Unisciti alla chat WhatsApp"
       description="Richiedi di entrare nella chat del workshop per prenotarti"
       href="https://chat.whatsapp.com/Hl1lQP97B6AKuAmTG9Unin"
-      boxType=FloatBox.WhatsappChat
+      boxType=ActionBox.WhatsappChat
     />
   </>
 }
