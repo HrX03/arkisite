@@ -10,6 +10,7 @@ import * as Core__Option from "@rescript/core/src/Core__Option.res.mjs";
 import * as JsxRuntime from "react/jsx-runtime";
 
 function GDCIndex$GDCPageCard(props) {
+  var extraText = props.extraText;
   var href = props.href;
   var image = props.image;
   var eventType = props.eventType;
@@ -48,13 +49,32 @@ function GDCIndex$GDCPageCard(props) {
                     JsxRuntime.jsxs("div", {
                           children: [
                             image !== undefined ? JsxRuntime.jsx("img", {
-                                    className: "w-full h-36 object-cover " + Core__Option.getOr(props.objectAlignment, ""),
+                                    className: "w-full h-36 absolute object-cover " + Core__Option.getOr(props.objectAlignment, ""),
                                     alt: title + " cover",
                                     src: image
                                   }) : JsxRuntime.jsx("div", {}),
-                            tmp
+                            tmp,
+                            extraText !== undefined ? JsxRuntime.jsx("div", {
+                                    children: JsxRuntime.jsxs("div", {
+                                          children: [
+                                            JsxRuntime.jsx("img", {
+                                                  className: "h-full w-[672px] absolute object-cover object-left",
+                                                  src: "/static/img/gdc-band.svg"
+                                                }),
+                                            JsxRuntime.jsx("div", {
+                                                  children: JsxRuntime.jsx("h3", {
+                                                        children: extraText,
+                                                        className: "absolute"
+                                                      }),
+                                                  className: "absolute w-full h-full flex justify-start items-center px-4"
+                                                })
+                                          ],
+                                          className: "h-full w-full relative"
+                                        }),
+                                    className: "h-8 w-full absolute -bottom-1"
+                                  }) : JsxRuntime.jsx("div", {})
                           ],
-                          className: "relative"
+                          className: "relative w-full h-36 "
                         }),
                     JsxRuntime.jsxs("div", {
                           children: [
@@ -153,7 +173,8 @@ function GDCIndex$default(props) {
                               theme: "Pink",
                               eventType: "Contest",
                               image: "/static/img/gdc/GDC9.0_DS_Contest_Cover.webp",
-                              href: "/gdc/contest/dscontest"
+                              href: "/gdc/contest/dscontest",
+                              extraText: "COMPLETATO!"
                             })
                       ],
                       className: "flex flex-col gap-2 pb-32"

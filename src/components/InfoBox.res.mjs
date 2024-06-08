@@ -34,13 +34,14 @@ var InfoRow = {
 };
 
 function InfoBox(props) {
+  var title = props.title;
   return JsxRuntime.jsxs("div", {
               children: [
                 JsxRuntime.jsx(InfoBox$MarqueeGradient, {}),
                 JsxRuntime.jsxs("div", {
                       children: [
                         JsxRuntime.jsx("h2", {
-                              children: "TOO LONG, WON'T READ"
+                              children: title !== undefined ? title : "TOO LONG, WON'T READ"
                             }),
                         JsxRuntime.jsx("div", {
                               children: props.children,

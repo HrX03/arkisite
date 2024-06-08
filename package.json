@@ -32,6 +32,7 @@
     "tailwindcss": "^3.4.3"
   },
   "trustedDependencies": [
+    "gentype",
     "rescript"
   ]
 }

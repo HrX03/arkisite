@@ -23,6 +23,12 @@ function resolveTParam(tparam) {
                     className: "link",
                     href: tparam._0
                   });
+    case "Img" :
+        return JsxRuntime.jsx("img", {
+                    className: "w-full",
+                    alt: tparam._1,
+                    src: tparam._0
+                  });
     case "Str" :
         return tparam._0;
     

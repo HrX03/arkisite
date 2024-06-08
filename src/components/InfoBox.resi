@@ -4,4 +4,4 @@ module InfoRow: {
 }
 
 @react.component
-let make: (~children: React.element) => React.element
+let make: (~title: string=?, ~children: React.element) => React.element

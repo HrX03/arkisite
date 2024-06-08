@@ -1,6 +1,15 @@
 module GDCPageCard = {
   @react.component
-  let make = (~title, ~subtitle, ~theme, ~eventType=?, ~image=?, ~href=?, ~objectAlignment=?) => {
+  let make = (
+    ~title,
+    ~subtitle,
+    ~theme,
+    ~eventType=?,
+    ~image=?,
+    ~href=?,
+    ~objectAlignment=?,
+    ~extraText=?,
+  ) => {
     let themeClass = GDCUtils.getClassForTheme(theme)
     Utils.conditionalWrapper(
       ~wrapper=children => {
@@ -12,10 +21,13 @@ module GDCPageCard = {
       },
       ~children={
         <>
-          <div className="relative">
+          <div className="relative w-full h-36 ">
             {switch image {
-            | Some(image) => <img
-                src=image alt={`${title} cover`} className=`w-full h-36 object-cover ${objectAlignment->Option.getOr("")}`
+            | Some(image) =>
+              <img
+                src=image
+                alt={`${title} cover`}
+                className={`w-full h-36 absolute object-cover ${objectAlignment->Option.getOr("")}`}
               />
             | None => <div />
             }}
@@ -27,6 +39,21 @@ module GDCPageCard = {
                   <img src={`/static/img/${eventIcon}`} alt=eventAlt className="icon w-4/5 h-4/5" />
                 </div>
               }
+            | None => <div />
+            }}
+            {switch extraText {
+            | Some(txt) =>
+              <div className="h-8 w-full absolute -bottom-1">
+                <div className="h-full w-full relative">
+                  <img
+                    src="/static/img/gdc-band.svg"
+                    className="h-full w-[672px] absolute object-cover object-left"
+                  />
+                  <div className="absolute w-full h-full flex justify-start items-center px-4">
+                    <h3 className="absolute"> {React.string(txt)} </h3>
+                  </div>
+                </div>
+              </div>
             | None => <div />
             }}
           </div>
@@ -71,7 +98,7 @@ let default = () => {
       boxType=ActionBox.Download
       shouldFloat=false
     />
-    <div className="h-2"/>
+    <div className="h-2" />
     <div className="flex flex-col gap-2 pb-32">
       <GDCPageCard
         title="Ebanisteria Meccanica"
@@ -114,6 +141,7 @@ let default = () => {
         eventType=EventInfo.Contest
         image="/static/img/gdc/GDC9.0_DS_Contest_Cover.webp"
         href="/gdc/contest/dscontest"
+        extraText="COMPLETATO!"
       />
     </div>
   </>

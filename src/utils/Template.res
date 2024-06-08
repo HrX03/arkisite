@@ -1,12 +1,13 @@
 let pWrap = string => React.string(string)
 
-type rec tparam = NL | Strong(tparam) | Header(tparam) | Link(string, tparam) | Str(string)
+type rec tparam = NL | Strong(tparam) | Header(tparam) | Link(string, tparam) | Img(string, string) | Str(string)
 let rec resolveTParam = tparam => {
   switch tparam {
   | NL => <br />
   | Strong(inner) => <strong> {inner->resolveTParam} </strong>
   | Header(inner) => <h3> {inner->resolveTParam} </h3>
   | Link(href, inner) => <a href className="link"> {inner->resolveTParam} </a>
+  | Img(url, alt) => <img src=url alt className="w-full" />
   | Str(str) => React.string(str)
   }
 }
