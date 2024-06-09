@@ -5,6 +5,21 @@ let contents = {
   Arkimastria, in occasione della Giornata del Colore 9.0, lancia il primo Contest dedicato alla progettazione di un elemento d'arredo in collaborazione con Diego Moretti di ${Strong(Str("Ebanisteria Meccanica"))}, una affermata realt${Str("à")} attiva da tre generazioni in continua evoluzione, da sempre impegnata nella promozione dell'artigianalit${Str("à")}. L'oggetto del contest ${Str("è")} uno sgabello, che incarna l'anima nomade dell'evento, semplice da costruire e da trasportare
   ${NL}
   ${NL}
+  ${Header(Str("ANNUNCIATI I VINCITORI !!!"))}
+  ${NL}
+  ${Strong(Str("PRIMO POSTO:"))} FU-NE di ${Strong(Str("Marco Ciardello"))}
+  ${Img("/static/img/gdc/GDC9.0_DS_Contest_Winner1.webp", "Proposta di Marco Ciardello")}
+  ${NL}
+  ${Strong(Str("SECONDO POSTO:"))} senza_radici di ${Strong(Str("Vittorio Pannozzo"))}
+  ${Img("/static/img/gdc/GDC9.0_DS_Contest_Winner2.webp", "Proposta di Vittorio Pannozzo")}
+  ${NL}
+  ${Strong(Str("TERZO POSTO:"))} SgaBello ma non Balla di ${Strong(Str("Giacomo Cossu"))}
+  ${Img("/static/img/gdc/GDC9.0_DS_Contest_Winner3.webp", "Proposta di Giacomo Cossu")}
+  ${NL}
+  ${Strong(Str("MENZIONE D'ONORE:"))} Yes-MADE stool(s) di ${Strong(Str("Lara Marras e Simone Sanna"))}
+  ${Img("/static/img/gdc/GDC9.0_DS_Contest_Winner4.webp", "Proposta di Lara Marras e Simone Sanna")}
+  ${NL}
+  ${NL}
   ${Header(Str("IL TEMA"))}
   Il ${Strong(Str("tema"))} scelto per la GDC di quest'anno ${Str("è")} riassunto nel titolo "${Strong(Str("noMADE"))}" in doppia accezione italiana e inglese (nomade e non fatto/abbandonato). Caratteristica del nomadismo ${Str("è")} l'esistenza transitoria dell'individuo attraverso gli spazi ed i luoghi.
   ${NL}
@@ -31,12 +46,6 @@ let contents = {
   ${Strong(Str("Tutti e 4 i vincitori potranno realizzare il proprio progetto dal vivo durante il workshop di Ebanisteria meccanica per la GDC9.0 il 10/06 presso la sede di Arkimastria."))}
   ${NL}
   ${NL}
-  ${Header(Str("INFO PER LA CONSEGNA"))}
-  Deadline: ${Strong(Str("2 GIUGNO ORE 23:59"))}${NL}
-  Indirizzo email: ${Link("mailto:asap.arkimastria@yahoo.it", Strong(Str("asap.arkimastria@yahoo.it")))}
-  ${NL}
-  ${NL}
-  ${Header(Str("SCARICA IL BANDO ORA !!!"))}
   `}
 }
 
@@ -55,13 +64,10 @@ let default = () => {
       image="/static/img/gdc/GDC9.0_DS_Contest_Cover.webp"
       eventType=EventInfo.Contest
     />
+    <InfoBox title="THAT'S ALL FOLKS">
+      <p>{React.string("Il contest è ufficialmente concluso e i vincitori son stati annunciati!")}</p>
+      <p>{React.string("Continua a leggere per scoprire di più!")}</p>
+    </InfoBox>
     <div key="content" className="p-4"> contents </div>
-    <ActionBox
-      key="downloadbox"
-      title="Scarica il bando"
-      description="Contiene tutte le informazioni per partecipare, scadenze e regole"
-      href="https://drive.google.com/uc?export=download&id=1aE_6yhInGurtrEYovsQKQZbRRPADClU8"
-      boxType=ActionBox.Download
-    />
   </>
 }
