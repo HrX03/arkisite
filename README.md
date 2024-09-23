@@ -1,107 +1,40 @@
-# ReScript / NextJS Starter
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-- [Installation](../../README.md)
+## Getting Started
 
-This is a NextJS based template with following setup:
+First, run the development server:
 
-- Full Tailwind v3 config & basic css scaffold (+ production setup w/ purge-css & cssnano)
-- [ReScript](https://rescript-lang.org) + [Core](https://github.com/rescript-association/rescript-core) + React
-- Some ReScript Bindings for Next to get you started
-- Preconfigured Dependencies: `@rescript/react`
-
-**Note:** This setup is based on the `v1` `package-lock` format utilized by `npm@6`. If you want to use the newer `v2` version, delete the `package-lock.json` file and install the dependencies with `npm@7`.
-
-## Development
-
-Run ReScript in dev mode:
-
-```
-npm run res:dev
-```
-
-In another tab, run the Next dev server:
-
-```
+```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Useful commands
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Build CSS seperately via `postcss` (useful for debugging)
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-```
-# Devmode
-npx postcss styles/main.css -o test.css
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-# Production
-NODE_ENV=production npx postcss styles/main.css -o test.css
-```
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Test production setup with Next
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-```
-# Make sure to uncomment the `target` attribute in `now.json` first, before you run this:
-npm run build
-PORT=3001 npm start
-```
+## Learn More
 
-## Tips
+To learn more about Next.js, take a look at the following resources:
 
-### ES6 vs CommonJS
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-This template is complying to the ES6 module format, and therefore compiles ReScript code to `mjs` files. In case you want to use this template with the old `commonjs` format, do the following changes:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-1. Set `package-specs` and `suffix` to the following configuration:
+## Deploy on Vercel
 
-```json
-{
-  //...
-  "package-specs": {
-    "module": "commonjs",
-    "in-source": true
-  },
-  "suffix": ".res.js"
-}
-```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-2. Replace all import paths in `pages` that refer to `src/MyResFile.res.mjs` to `src/MyResFile.res.js`
-
-```diff
-// pages/_app.js
--import ResApp from "src/App.res.mjs"
-+import ResApp from "src/App.res.js"
-```
-
-Done. You are now running on commonjs modules.
-
-### Don't be afraid to adapt your Next bindings
-
-We ship some general bindings for `NextJS`, but we try to keep them simple. Some use-cases and APIs might not be reflected yet, so feel free to adapt the file as you see fit for your app.
-
-As with every file fork, if you keep the changes git trackable, it's pretty straight-forward to pull in upstream changes later on.
-
-### Fast Refresh & ReScript
-
-Make sure to create interface files (`.resi`) for each `page/*.res` file.
-
-Fast Refresh requires you to **only export React components**, and it's easy to unintenionally export other values that will disable Fast Refresh (you will see a message in the browser console whenever this happens).
-
-For the 100% "always-works-method", we recommend putting your ReScript components in e.g. the `src` directory, and re-export them in plain `pages/*.js` files instead (check out the templates initial `pages` directory to see how we forward our React components to make sure we fulfill the Fast-Refresh naming conventions).
-
-### Filenames with special characters
-
-ReScript supports filenames with special characters: e.g. `pages/blog/[slug].res`, but be aware that you can't access these these modules within other modules (since there is no syntax to express modules with e.g. `[` characters). Also don't forget to create an additional `.resi` file to comply to Fast Refresh rules.
-
-## Q & A
-
-### Why are the generated `.res.mjs` files tracked in git?
-
-In ReScript, it's a good habit to keep track of the actual JS output the compiler emits. It allows quick sanity checking if we made any changes that actually have an impact on the resulting JS code (especially when doing major compiler upgrades, it's a good way to verify if production code will behave the same way as before the upgrade).
-
-This will also make it easier for your Non-ReScript coworkers to read and understand the changes in Github PRs, and call you out when you are writing inefficient code.
-
-If you want to opt-out, feel free to remove all compiled `.res.mjs` files within the `src` directory and add `src/**/*.res.mjs` in your `.gitignore`.
-
-### How trustworthy is this template?
-
-This template was created through our learnings of building the [ReScript Documentation Platform](https://rescript-lang.org) (which is built in NextJS), and is maintained by one of the ReScript core team members. It irregularly receives updates depending on demand and urgency (e.g. important changes in the `Next.res` bindings, or package dependencies).
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
